@@ -70,8 +70,8 @@ var currentImageUrl: String ?= null
     }
     fun memeshare(view: View) {
         val intent = Intent(Intent.ACTION_SEND)
-//        intent.type = "Text/plain"
-        intent.type = "image/text"
+       intent.type = "Text/plain"
+        
         intent.putExtra(Intent.EXTRA_TEXT,"Check out these coll memes  $currentImageUrl ")
         val chosser = Intent(Intent.createChooser(intent, "Share it using ..."))
         startActivity(chosser)
