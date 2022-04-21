@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/MemeImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/shareButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/MemeImageView"
+        app:layout_constraintLeft_toLeftOf="@id/MemeImageView"
+        app:layout_constraintRight_toRightOf="@id/MemeImageView"
+        app:layout_constraintTop_toTopOf="@id/MemeImageView"
+
+        />
+
+    <Button
+        android:id="@+id/prevButton"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#1E88E5"
+        android:drawableLeft="@drawable/shareicon"
+        android:drawableTint="#3A3939"
+        android:onClick="memeshare"
+        android:padding="5dp"
+        android:text="share"
+        android:textSize="16sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/shareButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/nextButton"
+        app:layout_constraintTop_toTopOf="@+id/nextButton"
+
+        />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#1E88E5"
+        android:drawableRight="@drawable/nexticon"
+        android:drawableTint="#3A3939"
+        android:onClick="nextmeme"
+        android:padding="5dp"
+        android:text="next"
+        android:textSize="16sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/prevButton"
+        app:layout_constraintTop_toTopOf="@+id/prevButton"
+         />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#00ACC1"
+        android:drawableLeft="@drawable/previcon"
+        android:drawableTint="#FF3A3939"
+        android:onClick="prevmeme"
+        android:padding="5dp"
+        android:text="prev"
+        android:textSize="16sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/prevButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"  />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
